@@ -86,9 +86,22 @@ body{
 }
 
 .banner{
-    min-height: 500px;
-    background: linear-gradient(90deg, rgba(13, 13, 28, 0.9) 25% ,rgba(17, 18, 34, 0.6) 60% )
-    url("https://media.istockphoto.com/id/1353994069/vector/neon-futuristic-game-controller.jpg?s=612x612&w=0&k=20&c=ar9BzcuxY8RalO-k3N7ZDQdeVVFvmtJM80OJWETomec=")
-    
+    min-height: 450px;
+    background: linear-gradient(90deg, rgba(13, 13, 28, 0.9) 25% ,rgba(17, 18, 34, 0.6) 60% ),
+    url("https://startplaying.games/_next/image?url=https%3A%2F%2Fspg-images.s3.us-west-1.amazonaws.com%2F682f69d0-e300-4902-b935-25f1af77e7c1&w=3840&q=75");
+    background-size:  cover;
+    background-repeat: no-repeat;
+}
+.banner_content{
+    max-width: 400px;
+    padding-top: 100px;
+}
+
+.banner_title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 45px;
+    line-height: 1.2;
+
 }
 
