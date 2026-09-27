@@ -105,3 +105,21 @@ body{
 
 }
 
+.banner_text{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c1c4ca;
+    margin-bottom: 20px;
+}
+
+.banner_button{
+    padding: 15px 35px;
+    color: white;
+    font-size: 16px;
+    background: #8b32e8;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
