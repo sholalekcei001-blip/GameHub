@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #0D1218;
+    color: white;
+}
+
+.contanier{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header{
+    height: 65px;
+    background: #2e0032;
+    border-bottom:5px solid #630076
+}
+
+.header_container{
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.header_nav{
+    display: flex;
+    gap: 15px;
+}
+
+.header_nav a{
+    color: #b7bac0;
+    text-decoration: none;
+    font-size: 16px;
+}
+ 
+.header_action{
+    display: flex;
+    gap: 14px;
+}
+
+.header_search{
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header_login,
+.header_signUp{
+     color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header_login{
+    background: transparent;
+    border: 1px solid #303641
+}
+
+.header_signUp{
+    background:#8b32e8 ;
+    border: #8b32e8;
+}
+
+.banner{
+    min-height: 450px;
+    background: linear-gradient(90deg, rgba(13, 13, 28, 0.9) 25% ,rgba(17, 18, 34, 0.6) 60% ),
+    url("https://startplaying.games/_next/image?url=https%3A%2F%2Fspg-images.s3.us-west-1.amazonaws.com%2F682f69d0-e300-4902-b935-25f1af77e7c1&w=3840&q=75");
+    background-size:  cover;
+    background-repeat: no-repeat;
+}
+.banner_content{
+    max-width: 400px;
+    padding-top: 100px;
+}
+
+.banner_title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 45px;
+    line-height: 1.2;
+
+}
+
+.banner_text{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c1c4ca;
+    margin-bottom: 20px;
+}
+
+.banner_button{
+    padding: 15px 35px;
+    color: white;
+    font-size: 16px;
+    background: #8b32e8;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.popular_games{
+    padding: 40px 0;
+}
+.popular_games_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
