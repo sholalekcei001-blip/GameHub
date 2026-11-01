@@ -14,7 +14,7 @@
         <div class="contanier">
             <div class="header_container">
                 <div class="logo">
-                    <a href="index.html" class="header_logo"><i class="fa-brands fa-steam"></i><span>GameHub</span></style></a>
+                    <a href="index.html" class="header_logo"><i class="fa-brands fa-steam"></i><span>GameHub</span></a>
                 </div>
 
                 <nav class="header_nav">
@@ -30,90 +30,275 @@
                     <button class="header_login">login</button>
                     <button class="header_signUp">signUp</button>
                 </div>
-
             </div>
         </div>
     </header>
+
     <main>
-        <section>
-            <section class="banner">
-                <div class="contanier">
-                    <div class="banner_content">
-                        <h1 class="banner_title">Discover <br> your next game</h1>
-                        <p class="banner_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste animi
-                            veritatis at neque!</p>
+        <section class="banner">
+            <div class="contanier">
+                <div class="banner_content">
+                    <h1 class="banner_title">Discover <br> your next game</h1>
+                    <p class="banner_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste animi
+                        veritatis at neque!</p>
 
-                        <a class="banner_button">Explore Games</a>
+                    <a class="banner_button">Explore Games</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular_games">
+            <div class="contanier">
+                <div class="popular_games_header">
+                    <h2 class="popular_games_title">Popular Games</h2>
+                    <a href="#" class="popular_games_view_all">View All <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+
+                <div class="popular_game_list">
+                    <article class="game_card">
+                        <img class="game_gard_image"
+                            src="https://thumb.wikimedia.org/wikipedia/ru/thumb/7/7c/Elden_Ring_-_cover.jpg/330px-Elden_Ring_-_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Elden Ring</h3>
+                            <p class="game_card_genre">RPG, Adventure</p>
+                            <p style="color: rgba(255,213,0,0.807);">4. <span style="color: rgb(253,144,1);">7</span></p>
+                        </div>
+                    </article>
+                    <article class="game_card">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-dgMdKpewyVFrVpSlYepNzoUV3YzYOHvwc_BKXdY9w&s=10">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Call of Duty</h3>
+                            <p class="game_card_genre">Action, Shooter</p>
+                            <p style="color: rgba(255,213,0,0.807);">5 <span style="color: rgb(253,144,1);"></span></p>
+                        </div>
+                    </article>
+                    <article class="game_card">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWqq2uJL8jUvdxKcMk1SndnSgd3XVmcAAi_6rF8513Q&s=10">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Cyberpunk</h3>
+                            <p class="game_card_genre">RPG, Open World</p>
+                            <p style="color: rgba(255,213,0,0.807);">2 <span style="color: rgb(253,144,1);"></span></p>
+                        </div>
+                    </article>
+                    <article class="game_card">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrsNnft_ljpcz16n07bLEXiDGd4m3eGORe3vnuUDoJFA&s=10">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Hogwarts Legacy</h3>
+                            <p class="game_card_genre">RPG, Adventure</p>
+                            <p style="color: rgba(255,213,0,0.807);">2.<span style="color: rgb(253,144,1);">7</span></p>
+                        </div>
+                    </article>
+                    <article class="game_card">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWo3dnWVmSMLcxAPlHoZs4GCCVc6yEqu_5cqDm3r0cjg&s=10">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Forza Horizon</h3>
+                            <p class="game_card_genre">Racing, Open World</p>
+                            <p style="color: rgba(255,213,0,0.807);">4.<span style="color: rgb(253,144,1);">5</span></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST NEWS + TOP RATED -->
+        <section class="latest_news">
+            <div class="contanier">
+                <div class="latest_news_layout">
+
+                    <!-- Левая часть: новости -->
+                    <div class="news">
+                        <div class="news_header">
+                            <h2 class="news_title">Latest News</h2>
+                            <a href="#" class="news_view_all">View All <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+
+                        <div class="news_list">
+                            <article class="news_card">
+                                <img class="news_card_image" src="https://picsum.photos/seed/news1/400/260" alt="News 1">
+                                <div class="news_card_content">
+                                    <h3 class="news_card_title">New expansion announced for Elden Ring</h3>
+                                    <p class="news_card_date">May 20, 2025</p>
+                                    <p class="news_card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi veritatis at neque, quos
+                                        dolorem.</p>
+                                </div>
+                            </article>
+
+                            <article class="news_card">
+                                <img class="news_card_image" src="https://picsum.photos/seed/news2/400/260" alt="News 2">
+                                <div class="news_card_content">
+                                    <h3 class="news_card_title">Cyberpunk gets a huge update with new features</h3>
+                                    <p class="news_card_date">May 18, 2025</p>
+                                    <p class="news_card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi veritatis at neque, quos
+                                        dolorem.</p>
+                                </div>
+                            </article>
+
+                            <article class="news_card">
+                                <img class="news_card_image" src="https://picsum.photos/seed/news3/400/260" alt="News 3">
+                                <div class="news_card_content">
+                                    <h3 class="news_card_title">Forza Horizon: release date revealed</h3>
+                                    <p class="news_card_date">May 15, 2025</p>
+                                    <p class="news_card_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi veritatis at neque, quos
+                                        dolorem.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Правая часть: топ рейтинга -->
+                    <aside class="top_rated">
+                        <h2 class="top_rated_title">Top Rated</h2>
+
+                        <ol class="top_rated_list">
+                            <li class="top_item">
+                                <span class="top_item_number">1</span>
+                                <img class="top_item_image"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-dgMdKpewyVFrVpSlYepNzoUV3YzYOHvwc_BKXdY9w&s=10"
+                                    alt="Call of Duty">
+                                <div class="top_item_info">
+                                    <h3 class="top_item_name">Call of Duty</h3>
+                                    <p class="top_item_genre">Action, Shooter</p>
+                                </div>
+                                <span class="top_item_rating">5.0</span>
+                            </li>
+
+                            <li class="top_item">
+                                <span class="top_item_number">2</span>
+                                <img class="top_item_image"
+                                    src="https://thumb.wikimedia.org/wikipedia/ru/thumb/7/7c/Elden_Ring_-_cover.jpg/330px-Elden_Ring_-_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                                    alt="Elden Ring">
+                                <div class="top_item_info">
+                                    <h3 class="top_item_name">Elden Ring</h3>
+                                    <p class="top_item_genre">RPG, Adventure</p>
+                                </div>
+                                <span class="top_item_rating">4.7</span>
+                            </li>
+
+                            <li class="top_item">
+                                <span class="top_item_number">3</span>
+                                <img class="top_item_image"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWo3dnWVmSMLcxAPlHoZs4GCCVc6yEqu_5cqDm3r0cjg&s=10"
+                                    alt="Forza Horizon">
+                                <div class="top_item_info">
+                                    <h3 class="top_item_name">Forza Horizon</h3>
+                                    <p class="top_item_genre">Racing, Open World</p>
+                                </div>
+                                <span class="top_item_rating">4.5</span>
+                            </li>
+
+                            <li class="top_item">
+                                <span class="top_item_number">4</span>
+                                <img class="top_item_image"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrsNnft_ljpcz16n07bLEXiDGd4m3eGORe3vnuUDoJFA&s=10"
+                                    alt="Hogwarts Legacy">
+                                <div class="top_item_info">
+                                    <h3 class="top_item_name">Hogwarts Legacy</h3>
+                                    <p class="top_item_genre">RPG, Adventure</p>
+                                </div>
+                                <span class="top_item_rating">2.7</span>
+                            </li>
+
+                            <li class="top_item">
+                                <span class="top_item_number">5</span>
+                                <img class="top_item_image"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWqq2uJL8jUvdxKcMk1SndnSgd3XVmcAAi_6rF8513Q&s=10"
+                                    alt="Cyberpunk">
+                                <div class="top_item_info">
+                                    <h3 class="top_item_name">Cyberpunk</h3>
+                                    <p class="top_item_genre">RPG, Open World</p>
+                                </div>
+                                <span class="top_item_rating">2.0</span>
+                            </li>
+                        </ol>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN OUR COMMUNITY -->
+        <section class="community">
+            <div class="contanier">
+                <div class="community_box">
+                    <!-- джойстик слева -->
+                    <div class="community_art">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+
+                    <!-- контент справа -->
+                    <div class="community_content">
+                        <h2 class="community_title">Join Our Community</h2>
+                        <p class="community_text">Meet players from all over the world, share your best moments,
+                            discuss new games and never miss the latest news.</p>
+                        <a href="#" class="community_button">Sign Up Now</a>
                     </div>
                 </div>
-            </section>
-
-            <section class="popular_games">
-                <div class="contanier">
-                    <div class="popular_games_header">
-                        <h2 class="popular_games_title">Popular Games</h2>
-
-                        <a href="#" class="popular_games_view_all">View All <i class="fa-solid fa-arrow-right-long"></i></a>
-
-                     </div>
-
-                    <div class="popular_game_list">
-                        <article class="game_card">
-                            <img class="game_gard_image"
-                                src="https://thumb.wikimedia.org/wikipedia/ru/thumb/7/7c/Elden_Ring_-_cover.jpg/330px-Elden_Ring_-_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail">
-                            <div class="game_card_content">
-                                <h3 class="game_card_title">Elden Ring</h3>
-                                <p class="game_card_genre">RPG, Adventure</p>
-                                <p style="color: rgba(255,213,0,0.807);">4. <span style="color: rgb(253,144,1);">7</span>
-                                </p>
-                            </div>
-                        </article>
-                        <article class="game_card">
-                            <img class="game_gard_image"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-dgMdKpewyVFrVpSlYepNzoUV3YzYOHvwc_BKXdY9w&s=10">
-                            <div class="game_card_content">
-                                <h3 class="game_card_title">Call of Duty</h3>
-                                <p class="game_card_genre">Acttion, Shooter</p>
-                                <p style="color: rgba(255,213,0,0.807);">5 <span style="color: rgb(253,144,1);"></span></p>
-                            </div>
-                        </article>
-                        <article class="game_card">
-                            <img class="game_gard_image"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWqq2uJL8jUvdxKcMk1SndnSgd3XVmcAAi_6rF8513Q&s=10">
-                            <div class="game_card_content">
-                                <h3 class="game_card_title">Cyberpunk</h3>
-                                <p class="game_card_genre">RPG, Open World</p>
-                                <p style="color: rgba(255,213,0,0.807);">2 <span style="color: rgb(253,144,1);"></span></p>
-                            </div>
-                        </article>
-                        <article class="game_card">
-                            <img class="game_gard_image"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrsNnft_ljpcz16n07bLEXiDGd4m3eGORe3vnuUDoJFA&s=10">
-                            <div class="game_card_content">
-                                <h3 class="game_card_title">Hogwarts Legacy</h3>
-                                <p class="game_card_genre">RPG, Adventure</p>
-                                <p style="color: rgba(255,213,0,0.807);">2.<span style="color: rgb(253,144,1);">7</span></p>
-                            </div>
-                        </article>
-                        <article class="game_card">
-                            <img class="game_gard_image"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWo3dnWVmSMLcxAPlHoZs4GCCVc6yEqu_5cqDm3r0cjg&s=10">
-                            <div class="game_card_content">
-                                <h3 class="game_card_title">Forza Horizon</h3>
-                                <p class="game_card_genre">Racing, Open World</p>
-                                <p style="color: rgba(255,213,0,0.807);">4.<span style="color: rgb(253,144,1);">5</span></p>
-                            </div>
-                        </article>
-
-                    </div>
-
-                </div>
-            </section>
-
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contanier">
+            <div class="footer_top">
 
+                <div class="footer_col footer_about">
+                    <a href="index.html" class="footer_logo"><i class="fa-brands fa-steam"></i><span>GameHub</span></a>
+                    <p class="footer_text">Your place to discover new games, read the latest news and talk with
+                        players from all over the world.</p>
+
+                    <div class="footer_socials">
+                        <a href="#" class="footer_social" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="footer_social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="footer_social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer_social" aria-label="Twitch"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer_col">
+                    <h3 class="footer_title">Explore</h3>
+                    <ul class="footer_list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_col">
+                    <h3 class="footer_title">Support</h3>
+                    <ul class="footer_list">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Report a Bug</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_col footer_subscribe">
+                    <h3 class="footer_title">Newsletter</h3>
+                    <p class="footer_text">Get the best game news straight to your inbox.</p>
+                    <div class="footer_form">
+                        <input type="email" class="footer_input" placeholder="Your email">
+                        <button type="button" class="footer_submit">Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer_bottom">
+                <p class="footer_copy">&copy; 2025 GameHub. All rights reserved.</p>
+                <div class="footer_links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
