@@ -10,6 +10,10 @@ body{
     color: white;
 }
 
+body.no-scroll{
+    overflow: hidden;
+}
+
 .contanier{
     width: 100%;
     max-width: 1280px;
@@ -51,6 +55,13 @@ body{
     color: #b7bac0;
     text-decoration: none;
     font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* активная страница в меню */
+.header_nav a.active{
+    color: white;
+    border-bottom: 2px solid #8b32e8;
 }
  
 .header_action{
@@ -157,6 +168,10 @@ body{
     overflow: hidden;
 }
 
+.game_card.hide{
+    display: none;
+}
+
 .game_card img{
     width: 100%;
     height: 220px;
@@ -177,6 +192,11 @@ body{
     margin-bottom: 10px;
 }
 
+.game_card_content .game_card_rating{
+    color: rgb(255, 213, 0);
+    font-weight: bold;
+}
+
 
 /* ===== LATEST NEWS + TOP RATED ===== */
 
@@ -191,9 +211,10 @@ body{
     align-items: stretch;        /* оба блока одной высоты */
 }
 
-/* общий стиль обеих панелей */
+/* общий стиль панелей */
 .news,
-.top_rated{
+.top_rated,
+.topics{
     display: flex;
     flex-direction: column;
     background: #1a222c;         /* чуть светлее фона сайта */
@@ -417,6 +438,896 @@ body{
 }
 
 
+/* ===== ОБЩИЕ ЭЛЕМЕНТЫ ВНУТРЕННИХ СТРАНИЦ ===== */
+
+/* баннер страницы */
+.page_banner{
+    padding: 70px 0;
+    background: linear-gradient(110deg, #2e0032 0%, #4a0f7a 55%, #8b32e8 100%);
+    border-bottom: 1px solid #630076;
+}
+
+.page_banner_content{
+    max-width: 600px;
+}
+
+.page_banner_title{
+    font-size: 45px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.page_banner_text{
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d6d8dd;
+}
+
+.section_title{
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+/* поля форм (используются в контактах и в окне входа) */
+.form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_label{
+    font-size: 14px;
+    color: #c1c4ca;
+}
+
+.form_input{
+    width: 100%;
+    padding: 13px 15px;
+    background: #0D1218;
+    border: 1px solid #303641;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_input::placeholder{
+    color: #6f737c;
+}
+
+.form_input:focus{
+    border-color: #8b32e8;
+    box-shadow: 0 0 0 3px rgba(139, 50, 232, 0.25);
+}
+
+.form_submit{
+    align-self: flex-start;
+    padding: 15px 40px;
+    background: #8b32e8;
+    border: 2px solid #b57cff;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(139, 50, 232, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_submit i{
+    margin-left: 8px;
+}
+
+
+/* ===== PAGE: GAMES ===== */
+
+.games_page{
+    padding: 40px 0 70px;
+}
+
+.filter_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.filter_group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter_btn{
+    padding: 9px 18px;
+    background: transparent;
+    border: 1px solid #303641;
+    border-radius: 20px;
+    color: #b7bac0;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.filter_btn.active{
+    background: #8b32e8;
+    border-color: #8b32e8;
+    color: white;
+}
+
+.filter_search{
+    max-width: 260px;
+}
+
+.games_empty{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #c1c4ca;
+}
+
+.games_empty[hidden]{
+    display: none;
+}
+
+
+/* ===== PAGE: NEWS ===== */
+
+.news_page{
+    padding: 50px 0 70px;
+}
+
+.news_tag{
+    display: inline-block;
+    padding: 4px 12px;
+    background: #4a0f7a;
+    border: 1px solid #8b32e8;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #d9bfff;
+}
+
+/* главная новость */
+.news_featured{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news_featured_image{
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news_featured_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px;
+}
+
+.news_featured_title{
+    margin-top: 16px;
+    font-size: 28px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.news_featured_text{
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #c1c4ca;
+}
+
+.read_more{
+    margin-top: 22px;
+    color: rgb(111, 111, 217);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* сетка новостей */
+.news_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.news_tile{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news_tile_image{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news_tile_content{
+    padding: 18px 20px 22px;
+}
+
+.news_tile_title{
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+
+.load_more_wrap{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.load_more{
+    padding: 14px 40px;
+    background: transparent;
+    border: 2px solid #8b32e8;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+/* ===== PAGE: COMMUNITY ===== */
+
+.stats{
+    padding: 50px 0 40px;
+}
+
+.stats_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat_card{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    padding: 26px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat_number{
+    font-size: 36px;
+    font-weight: bold;
+    color: #b57cff;
+}
+
+.stat_label{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #c1c4ca;
+}
+
+.topic_list{
+    flex: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.topic_item{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.topic_avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #4a0f7a;
+    border-radius: 50%;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.topic_info{
+    flex: 1;
+    min-width: 0;
+}
+
+.topic_title{
+    font-size: 16px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.topic_meta{
+    margin-top: 6px;
+    font-size: 13px;
+    color: #c1c4ca;
+}
+
+.topic_replies{
+    font-size: 14px;
+    color: #b57cff;
+    white-space: nowrap;
+}
+
+.member_avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #4a0f7a, #8b32e8);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+
+/* ===== PAGE: ABOUT ===== */
+
+.about_intro{
+    padding: 60px 0 40px;
+}
+
+.about_intro_layout{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about_title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about_text{
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #c1c4ca;
+}
+
+.about_stats{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 35px;
+    border-radius: 16px;
+    border: 2px solid #630076;
+    background: linear-gradient(250deg, #2e0032 0%, #4a0f7a 45%, #8b32e8 100%);
+}
+
+.about_stat{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.about_stat_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.about_stat_number{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.about_stat_label{
+    margin-top: 2px;
+    font-size: 14px;
+    color: #e4d4ff;
+}
+
+.about_values{
+    padding: 20px 0 40px;
+}
+
+.value_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about_team{
+    padding: 20px 0 60px;
+}
+
+.team_grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team_card{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team_avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 18px;
+    background: linear-gradient(135deg, #4a0f7a, #8b32e8);
+    border-radius: 50%;
+    font-size: 26px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.team_name{
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.team_role{
+    margin-top: 8px;
+    font-size: 13px;
+    color: #c1c4ca;
+}
+
+.team_socials{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.team_socials a{
+    color: #b7bac0;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== PAGE: CONTACTS ===== */
+
+.contact_info{
+    padding: 50px 0 40px;
+}
+
+.contact_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact_card{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    background: #4a0f7a;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact_card_title{
+    font-size: 19px;
+    transition: color 0.3s ease;
+}
+
+.contact_card_text{
+    margin-top: 12px;
+    font-size: 14px;
+    color: white;
+    word-break: break-word;
+}
+
+.contact_card_note{
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #c1c4ca;
+}
+
+.contact_main{
+    padding: 0 0 70px;
+}
+
+.contact_layout{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.contact_form_box,
+.contact_side{
+    background: #1a222c;
+    border: 2px solid #303641;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact_box_title{
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form_textarea{
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact_side{
+    display: flex;
+    flex-direction: column;
+}
+
+.social_list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact_side .social_list{
+    margin-bottom: 25px;
+}
+
+.social_item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: #4a0f7a;
+    border-radius: 10px;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.social_info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.social_name{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social_handle{
+    font-size: 13px;
+    color: #c1c4ca;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.quick_box{
+    margin-top: auto;
+    padding: 22px;
+    background: linear-gradient(135deg, #2e0032 0%, #4a0f7a 100%);
+    border: 1px solid #630076;
+    border-radius: 10px;
+}
+
+.quick_title{
+    font-size: 17px;
+}
+
+.quick_title i{
+    margin-right: 8px;
+    color: #b57cff;
+}
+
+.quick_text{
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #d6d8dd;
+}
+
+.quick_link{
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b57cff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== ОКНО ЛОГИН / РЕГИСТРАЦИЯ ===== */
+
+.modal{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(5, 8, 12, 0.8);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_box{
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 35px 32px;
+    background: #1a222c;
+    border: 2px solid #630076;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(139, 50, 232, 0.35);
+    transform: translateY(25px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.modal.open .modal_box{
+    transform: none;
+}
+
+.modal_close{
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #b7bac0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.modal_head{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.modal_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 14px;
+    background: linear-gradient(135deg, #4a0f7a, #8b32e8);
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.modal_title{
+    font-size: 24px;
+}
+
+.modal_sub{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c1c4ca;
+}
+
+.modal_tabs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 5px;
+    margin-bottom: 24px;
+    background: #0D1218;
+    border-radius: 10px;
+}
+
+.modal_tab{
+    padding: 11px 10px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #b7bac0;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.modal_tab.active{
+    background: #8b32e8;
+    color: white;
+}
+
+.auth_form{
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth_form.active{
+    display: flex;
+}
+
+.auth_form .form_submit{
+    align-self: stretch;
+    text-align: center;
+}
+
+.input_wrap{
+    position: relative;
+}
+
+.input_wrap .form_input{
+    padding-right: 44px;
+}
+
+.toggle_pass{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    color: #8e919a;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.auth_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form_check{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #c1c4ca;
+    cursor: pointer;
+}
+
+.form_check input{
+    width: 16px;
+    height: 16px;
+    accent-color: #8b32e8;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.auth_link{
+    color: #b57cff;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.auth_switch{
+    text-align: center;
+    font-size: 14px;
+    color: #c1c4ca;
+}
+
+.auth_message{
+    min-height: 18px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth_message.error{
+    color: #ff6b6b;
+}
+
+.auth_message.success{
+    color: #5ee08a;
+}
+
+
 /* ===== FOOTER ===== */
 
 .footer{
@@ -468,7 +1379,6 @@ body{
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
-/* соцсети */
 .footer_socials{
     display: flex;
     gap: 12px;
@@ -490,7 +1400,6 @@ body{
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* подписка */
 .footer_subscribe .footer_text{
     margin-top: 0;
 }
@@ -536,7 +1445,6 @@ body{
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* нижняя полоса */
 .footer_bottom{
     display: flex;
     align-items: center;
@@ -596,8 +1504,17 @@ body{
 
 /* ховер только на устройствах с мышью */
 @media (hover: hover){
+    .header_nav a:hover{
+        color: white;
+    }
+
     .game_card:hover,
-    .news_card:hover{
+    .news_card:hover,
+    .news_tile:hover,
+    .news_featured:hover,
+    .contact_card:hover,
+    .stat_card:hover,
+    .team_card:hover{
         transform: translateY(-6px);
         border-color: #8b32e8;
         box-shadow: 0 10px 25px rgba(139, 50, 232, 0.35);
@@ -605,12 +1522,23 @@ body{
     }
 
     .game_card:hover img,
-    .news_card:hover .news_card_image{
+    .news_card:hover .news_card_image,
+    .news_tile:hover .news_tile_image,
+    .news_featured:hover .news_featured_image{
         transform: scale(1.08);      /* лёгкий зум картинки */
     }
 
+    .news_featured{
+        overflow: hidden;
+    }
+
     .game_card:hover .game_card_title,
-    .news_card:hover .news_card_title{
+    .news_card:hover .news_card_title,
+    .news_tile:hover .news_tile_title,
+    .news_featured:hover .news_featured_title,
+    .contact_card:hover .contact_card_title,
+    .team_card:hover .team_name,
+    .topic_item:hover .topic_title{
         color: #b57cff;
     }
 
@@ -623,8 +1551,14 @@ body{
         transform: scale(1.08);
     }
 
-    /* кнопка Sign Up Now и джойстик */
-    .community_button:hover{
+    .topic_item:hover{
+        transform: translateX(4px);
+        border-color: #8b32e8;
+    }
+
+    /* кнопки */
+    .community_button:hover,
+    .form_submit:hover{
         background: #a05bff;
         transform: translateY(-3px);
         box-shadow: 0 10px 28px rgba(160, 91, 255, 0.65);
@@ -632,6 +1566,58 @@ body{
 
     .community_box:hover .community_art i{
         transform: rotate(4deg) scale(1.06);
+    }
+
+    .filter_btn:hover{
+        border-color: #8b32e8;
+        color: white;
+    }
+
+    .load_more:hover{
+        background: #8b32e8;
+        transform: translateY(-3px);
+    }
+
+    .read_more:hover,
+    .quick_link:hover,
+    .auth_link:hover{
+        color: white;
+    }
+
+    .contact_card:hover .contact_icon{
+        background: #8b32e8;
+        transform: scale(1.1);
+    }
+
+    .team_card:hover .team_avatar{
+        transform: scale(1.08);
+    }
+
+    .team_socials a:hover{
+        color: #b57cff;
+    }
+
+    .social_item:hover{
+        background: #303641;
+        transform: translateX(4px);
+    }
+
+    .social_item:hover .social_icon{
+        background: #8b32e8;
+    }
+
+    /* окно входа */
+    .modal_close:hover{
+        background: #303641;
+        color: white;
+    }
+
+    .modal_tab:hover:not(.active){
+        color: white;
+    }
+
+    .toggle_pass:hover{
+        color: white;
     }
 
     /* подвал */
@@ -658,6 +1644,12 @@ body{
 
 /* --- Адаптив --- */
 
+@media (max-width: 1100px){
+    .popular_game_list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 992px){
     .latest_news_layout{
         grid-template-columns: 1fr;
@@ -674,9 +1666,41 @@ body{
     .footer_top{
         grid-template-columns: 1fr 1fr;
     }
+
+    .contact_cards,
+    .stats_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact_layout,
+    .about_intro_layout{
+        grid-template-columns: 1fr;
+    }
+
+    .news_featured{
+        grid-template-columns: 1fr;
+    }
+
+    .news_featured_image{
+        min-height: 240px;
+        height: 260px;
+    }
+
+    .news_grid,
+    .value_cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px){
+    .popular_game_list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .community_box{
         flex-direction: column-reverse;   /* текст сверху, джойстик снизу */
         align-items: flex-start;
@@ -695,27 +1719,80 @@ body{
     .community_art i{
         font-size: 120px;
     }
+
+    .page_banner{
+        padding: 50px 0;
+    }
+
+    .page_banner_title{
+        font-size: 34px;
+    }
+
+    .form_row{
+        grid-template-columns: 1fr;
+    }
+
+    .filter_search{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 600px){
+    .popular_game_list{
+        grid-template-columns: 1fr;
+    }
+
     .news,
-    .top_rated{
+    .top_rated,
+    .topics{
         padding: 18px;
     }
+
     .news_card{
         flex-direction: column;
         gap: 0;
     }
+
     .news_card_image{
         width: 100%;
         height: 180px;
     }
+
     .news_card_content{
         padding: 15px 20px;
     }
 
     .community_box{
         padding: 35px 25px;
+    }
+
+    .contact_cards,
+    .stats_grid,
+    .news_grid,
+    .value_cards,
+    .team_grid{
+        grid-template-columns: 1fr;
+    }
+
+    .news_featured_content{
+        padding: 22px;
+    }
+
+    .news_featured_title{
+        font-size: 22px;
+    }
+
+    .contact_form_box,
+    .contact_side{
+        padding: 20px;
+    }
+
+    .form_submit{
+        align-self: stretch;
+    }
+
+    .modal_box{
+        padding: 28px 20px;
     }
 
     .footer{
@@ -730,5 +1807,243 @@ body{
     .footer_bottom{
         flex-direction: column;
         text-align: center;
+    }
+}
+/* ===== ПОИСК ===== */
+
+.search_overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 90px 20px 20px;
+    background: rgba(5, 8, 12, 0.8);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search_overlay.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.search_box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 640px;
+    max-height: calc(100vh - 130px);
+    overflow: hidden;
+    background: #1a222c;
+    border: 2px solid #630076;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(139, 50, 232, 0.35);
+    transform: translateY(-15px);
+    transition: transform 0.3s ease;
+}
+
+.search_overlay.open .search_box{
+    transform: none;
+}
+
+.search_input_wrap{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #303641;
+}
+
+.search_input_wrap > i{
+    color: #b57cff;
+    font-size: 18px;
+}
+
+.search_input{
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    font-family: inherit;
+}
+
+.search_input::placeholder{
+    color: #6f737c;
+}
+
+.search_close{
+    padding: 5px 10px;
+    background: #0D1218;
+    border: 1px solid #303641;
+    border-radius: 6px;
+    color: #b7bac0;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.search_results{
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.search_group_title{
+    padding: 8px 12px 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #8e919a;
+}
+
+.search_item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.search_item.active{
+    background: #303641;
+    border-color: #8b32e8;
+}
+
+.search_item_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #4a0f7a;
+    border-radius: 50%;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.search_item_info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.search_item_title{
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search_item_desc{
+    font-size: 12px;
+    color: #c1c4ca;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search_item_type{
+    padding: 3px 10px;
+    background: #4a0f7a;
+    border: 1px solid #8b32e8;
+    border-radius: 20px;
+    font-size: 11px;
+    color: #d9bfff;
+    flex-shrink: 0;
+}
+
+.search_item mark{
+    padding: 0 2px;
+    background: rgba(139, 50, 232, 0.5);
+    border-radius: 3px;
+    color: white;
+}
+
+.search_empty{
+    padding: 30px 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #c1c4ca;
+}
+
+.search_chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 4px 12px 12px;
+}
+
+.search_chip{
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #303641;
+    border-radius: 20px;
+    color: #b7bac0;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.search_hint{
+    padding: 12px 20px;
+    border-top: 1px solid #303641;
+    font-size: 12px;
+    text-align: center;
+    color: #8e919a;
+}
+
+@media (hover: hover){
+    .header_search{
+        transition: color 0.3s ease;
+    }
+
+    .header_search:hover{
+        color: #b57cff;
+    }
+
+    .search_item:hover{
+        background: #303641;
+        border-color: #8b32e8;
+    }
+
+    .search_chip:hover{
+        background: #8b32e8;
+        border-color: #8b32e8;
+        color: white;
+    }
+
+    .search_close:hover{
+        border-color: #8b32e8;
+        color: white;
+    }
+}
+
+@media (max-width: 600px){
+    .search_overlay{
+        padding: 70px 12px 12px;
+    }
+
+    .search_hint{
+        display: none;
+    }
+
+    .search_item_type{
+        display: none;
     }
 }

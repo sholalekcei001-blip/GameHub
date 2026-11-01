@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Contacts - GameHub</title>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <!-- PAGE BANNER -->
+        <section class="page_banner">
+            <div class="contanier">
+                <div class="page_banner_content">
+                    <h1 class="page_banner_title">Contact Us</h1>
+                    <p class="page_banner_text">Have a question, an idea or found a bug? Write to us and we will
+                        answer as soon as possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CARDS -->
+        <section class="contact_info">
+            <div class="contanier">
+                <div class="contact_cards">
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h3 class="contact_card_title">Email</h3>
+                        <p class="contact_card_text">support@gamehub.com</p>
+                        <p class="contact_card_note">We reply within 24 hours</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-phone"></i></div>
+                        <h3 class="contact_card_title">Phone</h3>
+                        <p class="contact_card_text">+1 (555) 123-45-67</p>
+                        <p class="contact_card_note">Mon - Fri, 9:00 - 18:00</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3 class="contact_card_title">Address</h3>
+                        <p class="contact_card_text">123 Gaming Street</p>
+                        <p class="contact_card_note">Game City, 10001</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-clock"></i></div>
+                        <h3 class="contact_card_title">Working Hours</h3>
+                        <p class="contact_card_text">Mon - Fri: 9:00 - 18:00</p>
+                        <p class="contact_card_note">Sat - Sun: day off</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM + SIDE -->
+        <section class="contact_main">
+            <div class="contanier">
+                <div class="contact_layout">
+
+                    <!-- Форма -->
+                    <div class="contact_form_box">
+                        <h2 class="contact_box_title">Send Us a Message</h2>
+
+                        <form class="contact_form" action="#" method="post">
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label class="form_label" for="name">Your Name</label>
+                                    <input class="form_input" type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form_group">
+                                    <label class="form_label" for="email">Your Email</label>
+                                    <input class="form_input" type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form_group">
+                                <label class="form_label" for="subject">Subject</label>
+                                <select class="form_input" id="subject" name="subject">
+                                    <option>General question</option>
+                                    <option>Report a bug</option>
+                                    <option>Partnership</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form_group">
+                                <label class="form_label" for="message">Message</label>
+                                <textarea class="form_input form_textarea" id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="form_submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Правая панель -->
+                    <aside class="contact_side">
+                        <h2 class="contact_box_title">Follow Us</h2>
+
+                        <ul class="social_list">
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-discord"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Discord</span>
+                                        <span class="social_handle">discord.gg/gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-x-twitter"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Twitter</span>
+                                        <span class="social_handle">@gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-youtube"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">YouTube</span>
+                                        <span class="social_handle">youtube.com/@gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-twitch"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Twitch</span>
+                                        <span class="social_handle">twitch.tv/gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="quick_box">
+                            <h3 class="quick_title"><i class="fa-solid fa-circle-question"></i> Quick Answers</h3>
+                            <p class="quick_text">Before writing to us, check the Help Center and FAQ - the answer to
+                                your question may already be there.</p>
+                            <a href="#" class="quick_link">Open Help Center <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

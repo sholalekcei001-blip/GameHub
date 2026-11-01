@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Games - GameHub</title>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <section class="page_banner">
+            <div class="contanier">
+                <div class="page_banner_content">
+                    <h1 class="page_banner_title">Games</h1>
+                    <p class="page_banner_text">Browse the best games, filter them by genre and find something new
+                        to play tonight.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="games_page">
+            <div class="contanier">
+
+                <!-- Фильтры и поиск -->
+                <div class="filter_bar">
+                    <div class="filter_group">
+                        <button type="button" class="filter_btn active" data-filter="all">All</button>
+                        <button type="button" class="filter_btn" data-filter="rpg">RPG</button>
+                        <button type="button" class="filter_btn" data-filter="action">Action</button>
+                        <button type="button" class="filter_btn" data-filter="shooter">Shooter</button>
+                        <button type="button" class="filter_btn" data-filter="adventure">Adventure</button>
+                        <button type="button" class="filter_btn" data-filter="racing">Racing</button>
+                        <button type="button" class="filter_btn" data-filter="open-world">Open World</button>
+                    </div>
+                    <input type="text" class="form_input filter_search" placeholder="Search games...">
+                </div>
+
+                <!-- Сетка игр -->
+                <div class="popular_game_list">
+                    <article class="game_card" data-genre="rpg adventure">
+                        <img class="game_gard_image"
+                            src="https://thumb.wikimedia.org/wikipedia/ru/thumb/7/7c/Elden_Ring_-_cover.jpg/330px-Elden_Ring_-_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Elden Ring">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Elden Ring</h3>
+                            <p class="game_card_genre">RPG, Adventure</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.7</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="action shooter">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-dgMdKpewyVFrVpSlYepNzoUV3YzYOHvwc_BKXdY9w&s=10" alt="Call of Duty">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Call of Duty</h3>
+                            <p class="game_card_genre">Action, Shooter</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 5.0</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="rpg open-world">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWqq2uJL8jUvdxKcMk1SndnSgd3XVmcAAi_6rF8513Q&s=10" alt="Cyberpunk">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Cyberpunk</h3>
+                            <p class="game_card_genre">RPG, Open World</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 2.0</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="rpg adventure">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrsNnft_ljpcz16n07bLEXiDGd4m3eGORe3vnuUDoJFA&s=10" alt="Hogwarts Legacy">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Hogwarts Legacy</h3>
+                            <p class="game_card_genre">RPG, Adventure</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 2.7</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="racing open-world">
+                        <img class="game_gard_image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWo3dnWVmSMLcxAPlHoZs4GCCVc6yEqu_5cqDm3r0cjg&s=10" alt="Forza Horizon">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Forza Horizon</h3>
+                            <p class="game_card_genre">Racing, Open World</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.5</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="rpg open-world">
+                        <img class="game_gard_image" src="https://picsum.photos/seed/game6/330/440" alt="The Witcher 3">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">The Witcher 3</h3>
+                            <p class="game_card_genre">RPG, Open World</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.9</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="action open-world">
+                        <img class="game_gard_image" src="https://picsum.photos/seed/game7/330/440" alt="GTA V">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">GTA V</h3>
+                            <p class="game_card_genre">Action, Open World</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.6</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="action shooter">
+                        <img class="game_gard_image" src="https://picsum.photos/seed/game8/330/440" alt="Resident Evil 4">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Resident Evil 4</h3>
+                            <p class="game_card_genre">Action, Shooter</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.8</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="racing action">
+                        <img class="game_gard_image" src="https://picsum.photos/seed/game9/330/440" alt="Need for Speed">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Need for Speed</h3>
+                            <p class="game_card_genre">Racing, Action</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.1</p>
+                        </div>
+                    </article>
+
+                    <article class="game_card" data-genre="adventure open-world">
+                        <img class="game_gard_image" src="https://picsum.photos/seed/game10/330/440" alt="Minecraft">
+                        <div class="game_card_content">
+                            <h3 class="game_card_title">Minecraft</h3>
+                            <p class="game_card_genre">Adventure, Open World</p>
+                            <p class="game_card_rating"><i class="fa-solid fa-star"></i> 4.8</p>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="games_empty" hidden>No games found. Try another genre or search.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
