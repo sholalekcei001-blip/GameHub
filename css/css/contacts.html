@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Contacts - GameHub</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contanier">
+            <div class="header_container">
+                <div class="logo">
+                    <a href="index.html" class="header_logo"><i class="fa-brands fa-steam"></i><span>GameHub</span></a>
+                </div>
+
+                <nav class="header_nav">
+                    <a href="index.html" class="header_link">Home</a>
+                    <a href="#" class="header_link">Games</a>
+                    <a href="#" class="header_link">News</a>
+                    <a href="#" class="header_link">Community</a>
+                    <a href="#" class="header_link">About</a>
+                    <a href="contacts.html" class="header_link active">Contacts</a>
+                </nav>
+
+                <div class="header_action">
+                    <button class="header_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="header_login">login</button>
+                    <button class="header_signUp">signUp</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE BANNER -->
+        <section class="page_banner">
+            <div class="contanier">
+                <div class="page_banner_content">
+                    <h1 class="page_banner_title">Contact Us</h1>
+                    <p class="page_banner_text">Have a question, an idea or found a bug? Write to us and we will
+                        answer as soon as possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CARDS -->
+        <section class="contact_info">
+            <div class="contanier">
+                <div class="contact_cards">
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h3 class="contact_card_title">Email</h3>
+                        <p class="contact_card_text">support@gamehub.com</p>
+                        <p class="contact_card_note">We reply within 24 hours</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-phone"></i></div>
+                        <h3 class="contact_card_title">Phone</h3>
+                        <p class="contact_card_text">+1 (555) 123-45-67</p>
+                        <p class="contact_card_note">Mon - Fri, 9:00 - 18:00</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3 class="contact_card_title">Address</h3>
+                        <p class="contact_card_text">123 Gaming Street</p>
+                        <p class="contact_card_note">Game City, 10001</p>
+                    </article>
+
+                    <article class="contact_card">
+                        <div class="contact_icon"><i class="fa-solid fa-clock"></i></div>
+                        <h3 class="contact_card_title">Working Hours</h3>
+                        <p class="contact_card_text">Mon - Fri: 9:00 - 18:00</p>
+                        <p class="contact_card_note">Sat - Sun: day off</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM + SIDE -->
+        <section class="contact_main">
+            <div class="contanier">
+                <div class="contact_layout">
+
+                    <!-- Форма -->
+                    <div class="contact_form_box">
+                        <h2 class="contact_box_title">Send Us a Message</h2>
+
+                        <form class="contact_form" action="#" method="post">
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label class="form_label" for="name">Your Name</label>
+                                    <input class="form_input" type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form_group">
+                                    <label class="form_label" for="email">Your Email</label>
+                                    <input class="form_input" type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form_group">
+                                <label class="form_label" for="subject">Subject</label>
+                                <select class="form_input" id="subject" name="subject">
+                                    <option>General question</option>
+                                    <option>Report a bug</option>
+                                    <option>Partnership</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form_group">
+                                <label class="form_label" for="message">Message</label>
+                                <textarea class="form_input form_textarea" id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="form_submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Правая панель -->
+                    <aside class="contact_side">
+                        <h2 class="contact_box_title">Follow Us</h2>
+
+                        <ul class="social_list">
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-discord"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Discord</span>
+                                        <span class="social_handle">discord.gg/gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-x-twitter"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Twitter</span>
+                                        <span class="social_handle">@gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-youtube"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">YouTube</span>
+                                        <span class="social_handle">youtube.com/@gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="social_item">
+                                    <span class="social_icon"><i class="fa-brands fa-twitch"></i></span>
+                                    <span class="social_info">
+                                        <span class="social_name">Twitch</span>
+                                        <span class="social_handle">twitch.tv/gamehub</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="quick_box">
+                            <h3 class="quick_title"><i class="fa-solid fa-circle-question"></i> Quick Answers</h3>
+                            <p class="quick_text">Before writing to us, check the Help Center and FAQ - the answer to
+                                your question may already be there.</p>
+                            <a href="#" class="quick_link">Open Help Center <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contanier">
+            <div class="footer_top">
+
+                <div class="footer_col footer_about">
+                    <a href="index.html" class="footer_logo"><i class="fa-brands fa-steam"></i><span>GameHub</span></a>
+                    <p class="footer_text">Your place to discover new games, read the latest news and talk with
+                        players from all over the world.</p>
+
+                    <div class="footer_socials">
+                        <a href="#" class="footer_social" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="#" class="footer_social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="footer_social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer_social" aria-label="Twitch"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer_col">
+                    <h3 class="footer_title">Explore</h3>
+                    <ul class="footer_list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_col">
+                    <h3 class="footer_title">Support</h3>
+                    <ul class="footer_list">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Report a Bug</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_col footer_subscribe">
+                    <h3 class="footer_title">Newsletter</h3>
+                    <p class="footer_text">Get the best game news straight to your inbox.</p>
+                    <div class="footer_form">
+                        <input type="email" class="footer_input" placeholder="Your email">
+                        <button type="button" class="footer_submit">Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer_bottom">
+                <p class="footer_copy">&copy; 2025 GameHub. All rights reserved.</p>
+                <div class="footer_links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

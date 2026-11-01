@@ -1,0 +1,1083 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #0D1218;
+    color: white;
+}
+
+.contanier{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header{
+    height: 65px;
+    background: #2e0032;
+    border-bottom:5px solid #630076
+}
+
+.header_container{
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.header_nav{
+    display: flex;
+    gap: 15px;
+}
+
+.header_nav a{
+    color: #b7bac0;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* активная страница в меню */
+.header_nav a.active{
+    color: white;
+    border-bottom: 2px solid #8b32e8;
+}
+ 
+.header_action{
+    display: flex;
+    gap: 14px;
+}
+
+.header_search{
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header_login,
+.header_signUp{
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.header_login{
+    background: transparent;
+    border: 1px solid #303641
+}
+
+.header_signUp{
+    background:#8b32e8;
+    border: #8b32e8;
+}
+
+.banner{
+    min-height: 450px;
+    background: linear-gradient(90deg, rgba(13, 13, 28, 0.9) 25% ,rgba(17, 18, 34, 0.6) 60% ),
+    url("https://startplaying.games/_next/image?url=https%3A%2F%2Fspg-images.s3.us-west-1.amazonaws.com%2F682f69d0-e300-4902-b935-25f1af77e7c1&w=3840&q=75");
+    background-size:  cover;
+    background-repeat: no-repeat;
+}
+
+.banner_content{
+    max-width: 400px;
+    padding-top: 100px;
+}
+
+.banner_title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 45px;
+    line-height: 1.2;
+}
+
+.banner_text{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c1c4ca;
+    margin-bottom: 20px;
+}
+
+.banner_button{
+    display: inline-block;
+    padding: 15px 35px;
+    color: white;
+    font-size: 16px;
+    background: #8b32e8;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.popular_games{
+    padding: 40px 0;
+}
+
+.popular_games_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.popular_games_header h2{
+    font-size: 26px;
+}
+
+.popular_games_header a{
+    text-decoration: none;
+    color: rgb(111, 111, 217);
+}
+
+.popular_game_list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.game_card{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.game_card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.game_card_content {
+    padding: 10px 20px;
+}
+
+.game_card_content h3{
+    font-size: 19px;
+}
+
+.game_card_content p{
+    font-size: 14px;
+    color: #c1c4ca;
+    margin-bottom: 10px;
+}
+
+
+/* ===== LATEST NEWS + TOP RATED ===== */
+
+.latest_news{
+    padding: 0 0 60px;
+}
+
+.latest_news_layout{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;        /* оба блока одной высоты */
+}
+
+/* общий стиль обеих панелей */
+.news,
+.top_rated{
+    display: flex;
+    flex-direction: column;
+    background: #1a222c;         /* чуть светлее фона сайта */
+    border: 2px solid #303641;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* --- Левая часть: новости --- */
+
+.news_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.news_title{
+    font-size: 26px;
+}
+
+.news_view_all{
+    text-decoration: none;
+    color: rgb(111, 111, 217);
+}
+
+.news_list{
+    flex: 1;                     /* занимает всю оставшуюся высоту панели */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news_card{
+    flex: 1;                     /* карточки делят высоту поровну */
+    display: flex;
+    gap: 20px;
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news_card_image{
+    width: 240px;
+    min-height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.news_card_content{
+    padding: 15px 20px 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news_card_title{
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.news_card_date{
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgb(111, 111, 217);
+}
+
+.news_card_text{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c1c4ca;
+}
+
+/* --- Правая часть: топ рейтинга --- */
+
+.top_rated_title{
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.top_rated_list{
+    flex: 1;                     /* растягивается на всю высоту панели */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* ровные промежутки между играми */
+    gap: 18px;
+}
+
+.top_item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.top_item_number{
+    width: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b32e8;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.top_item_image{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.top_item_info{
+    flex: 1;
+    min-width: 0;
+}
+
+.top_item_name{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top_item_genre{
+    margin-top: 5px;
+    font-size: 13px;
+    color: #c1c4ca;
+}
+
+.top_item_rating{
+    align-self: flex-end;        /* рейтинг справа внизу */
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 213, 0);     /* золотой */
+}
+
+
+/* ===== JOIN OUR COMMUNITY ===== */
+
+.community{
+    padding: 0 0 70px;
+}
+
+.community_box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    padding: 55px 60px;
+    border-radius: 16px;
+    border: 2px solid #630076;
+    /* светлый фиолетовый слева (под джойстиком) -> тёмный справа */
+    background: linear-gradient(250deg, #2e0032 0%, #4a0f7a 45%, #8b32e8 100%);
+}
+
+.community_content{
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+}
+
+.community_title{
+    font-size: 38px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.community_text{
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d6d8dd;
+}
+
+/* кнопка - блок в блоке */
+.community_button{
+    display: inline-block;
+    margin-top: 28px;
+    padding: 15px 40px;
+    background: #8b32e8;
+    border: 2px solid #b57cff;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;             /* курсор-рука */
+    box-shadow: 0 6px 20px rgba(139, 50, 232, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* джойстик (слева) */
+.community_art{
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    padding-left: 30px;
+}
+
+.community_art i{
+    display: block;
+    font-size: 190px;
+    color: white;
+    transform: rotate(12deg);
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.45));
+    transition: transform 0.4s ease;
+}
+
+/* мягкое свечение за джойстиком */
+.community_art::before{
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: -1;
+}
+
+
+/* ===== PAGE: CONTACTS ===== */
+
+/* баннер страницы */
+.page_banner{
+    padding: 70px 0;
+    background: linear-gradient(110deg, #2e0032 0%, #4a0f7a 55%, #8b32e8 100%);
+    border-bottom: 1px solid #630076;
+}
+
+.page_banner_content{
+    max-width: 600px;
+}
+
+.page_banner_title{
+    font-size: 45px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.page_banner_text{
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d6d8dd;
+}
+
+/* карточки контактов */
+.contact_info{
+    padding: 50px 0 40px;
+}
+
+.contact_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact_card{
+    background: #303641;
+    border: 2px solid #5d5d5d;
+    border-radius: 10px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    background: #4a0f7a;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact_card_title{
+    font-size: 19px;
+    transition: color 0.3s ease;
+}
+
+.contact_card_text{
+    margin-top: 12px;
+    font-size: 14px;
+    color: white;
+    word-break: break-word;
+}
+
+.contact_card_note{
+    margin-top: 8px;
+    font-size: 13px;
+    color: #c1c4ca;
+}
+
+/* форма + правая панель */
+.contact_main{
+    padding: 0 0 70px;
+}
+
+.contact_layout{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.contact_form_box,
+.contact_side{
+    background: #1a222c;
+    border: 2px solid #303641;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact_box_title{
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_label{
+    font-size: 14px;
+    color: #c1c4ca;
+}
+
+.form_input{
+    width: 100%;
+    padding: 13px 15px;
+    background: #0D1218;
+    border: 1px solid #303641;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_input::placeholder{
+    color: #6f737c;
+}
+
+.form_input:focus{
+    border-color: #8b32e8;
+    box-shadow: 0 0 0 3px rgba(139, 50, 232, 0.25);
+}
+
+.form_textarea{
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form_submit{
+    align-self: flex-start;
+    padding: 15px 40px;
+    background: #8b32e8;
+    border: 2px solid #b57cff;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(139, 50, 232, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form_submit i{
+    margin-left: 8px;
+}
+
+/* правая панель: соцсети */
+.contact_side{
+    display: flex;
+    flex-direction: column;
+}
+
+.social_list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.social_item{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: #4a0f7a;
+    border-radius: 10px;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.social_info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.social_name{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social_handle{
+    font-size: 13px;
+    color: #c1c4ca;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* блок «быстрые ответы» */
+.quick_box{
+    margin-top: auto;
+    padding: 22px;
+    background: linear-gradient(135deg, #2e0032 0%, #4a0f7a 100%);
+    border: 1px solid #630076;
+    border-radius: 10px;
+}
+
+.contact_side .social_list{
+    margin-bottom: 25px;
+}
+
+.quick_title{
+    font-size: 17px;
+}
+
+.quick_title i{
+    margin-right: 8px;
+    color: #b57cff;
+}
+
+.quick_text{
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #d6d8dd;
+}
+
+.quick_link{
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b57cff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer{
+    background: #2e0032;
+    border-top: 5px solid #630076;
+    padding-top: 60px;
+}
+
+.footer_top{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.footer_logo{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer_text{
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #b7bac0;
+}
+
+.footer_title{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer_list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer_list a{
+    color: #b7bac0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* соцсети */
+.footer_socials{
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.footer_social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #4a0f7a;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* подписка */
+.footer_subscribe .footer_text{
+    margin-top: 0;
+}
+
+.footer_form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.footer_input{
+    width: 100%;
+    padding: 12px 15px;
+    background: #1a0a24;
+    border: 1px solid #630076;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.footer_input::placeholder{
+    color: #8e919a;
+}
+
+.footer_input:focus{
+    border-color: #b57cff;
+}
+
+.footer_submit{
+    padding: 12px 15px;
+    background: #8b32e8;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* нижняя полоса */
+.footer_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid #4a0f7a;
+}
+
+.footer_copy{
+    font-size: 13px;
+    color: #b7bac0;
+}
+
+.footer_links{
+    display: flex;
+    gap: 20px;
+}
+
+.footer_links a{
+    font-size: 13px;
+    color: #b7bac0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== HOVER-ЭФФЕКТЫ ===== */
+
+/* карточки игр и новостей */
+.game_card,
+.news_card{
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game_card img,
+.news_card_image{
+    transition: transform 0.4s ease;
+}
+
+.game_card_title,
+.news_card_title{
+    transition: color 0.3s ease;
+}
+
+/* строки топа */
+.top_item{
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.top_item_image{
+    transition: transform 0.3s ease;
+}
+
+/* ховер только на устройствах с мышью */
+@media (hover: hover){
+    .header_nav a:hover{
+        color: white;
+    }
+
+    .game_card:hover,
+    .news_card:hover{
+        transform: translateY(-6px);
+        border-color: #8b32e8;
+        box-shadow: 0 10px 25px rgba(139, 50, 232, 0.35);
+        cursor: pointer;
+    }
+
+    .game_card:hover img,
+    .news_card:hover .news_card_image{
+        transform: scale(1.08);      /* лёгкий зум картинки */
+    }
+
+    .game_card:hover .game_card_title,
+    .news_card:hover .news_card_title{
+        color: #b57cff;
+    }
+
+    .top_item:hover{
+        background: #303641;
+        transform: translateX(4px);
+    }
+
+    .top_item:hover .top_item_image{
+        transform: scale(1.08);
+    }
+
+    /* кнопка Sign Up Now и джойстик */
+    .community_button:hover{
+        background: #a05bff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(160, 91, 255, 0.65);
+    }
+
+    .community_box:hover .community_art i{
+        transform: rotate(4deg) scale(1.06);
+    }
+
+    /* страница контактов */
+    .contact_card:hover{
+        transform: translateY(-6px);
+        border-color: #8b32e8;
+        box-shadow: 0 10px 25px rgba(139, 50, 232, 0.35);
+    }
+
+    .contact_card:hover .contact_icon{
+        background: #8b32e8;
+        transform: scale(1.1);
+    }
+
+    .contact_card:hover .contact_card_title{
+        color: #b57cff;
+    }
+
+    .form_submit:hover{
+        background: #a05bff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(160, 91, 255, 0.65);
+    }
+
+    .social_item:hover{
+        background: #303641;
+        transform: translateX(4px);
+    }
+
+    .social_item:hover .social_icon{
+        background: #8b32e8;
+    }
+
+    .quick_link:hover{
+        color: white;
+    }
+
+    /* подвал */
+    .footer_list a:hover{
+        color: #b57cff;
+        padding-left: 6px;
+    }
+
+    .footer_social:hover{
+        background: #8b32e8;
+        transform: translateY(-4px);
+    }
+
+    .footer_submit:hover{
+        background: #a05bff;
+        transform: translateY(-2px);
+    }
+
+    .footer_links a:hover{
+        color: #b57cff;
+    }
+}
+
+
+/* --- Адаптив --- */
+
+@media (max-width: 992px){
+    .latest_news_layout{
+        grid-template-columns: 1fr;
+    }
+
+    .community_box{
+        padding: 45px 40px;
+    }
+
+    .community_art i{
+        font-size: 140px;
+    }
+
+    .footer_top{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact_cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact_layout{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+    .community_box{
+        flex-direction: column-reverse;   /* текст сверху, джойстик снизу */
+        align-items: flex-start;
+        background: linear-gradient(160deg, #2e0032 0%, #4a0f7a 55%, #8b32e8 100%);
+    }
+
+    .community_title{
+        font-size: 30px;
+    }
+
+    .community_art{
+        align-self: center;
+        padding-left: 0;
+    }
+
+    .community_art i{
+        font-size: 120px;
+    }
+
+    .page_banner{
+        padding: 50px 0;
+    }
+
+    .page_banner_title{
+        font-size: 34px;
+    }
+
+    .form_row{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .news,
+    .top_rated{
+        padding: 18px;
+    }
+    .news_card{
+        flex-direction: column;
+        gap: 0;
+    }
+    .news_card_image{
+        width: 100%;
+        height: 180px;
+    }
+    .news_card_content{
+        padding: 15px 20px;
+    }
+
+    .community_box{
+        padding: 35px 25px;
+    }
+
+    .contact_cards{
+        grid-template-columns: 1fr;
+    }
+
+    .contact_form_box,
+    .contact_side{
+        padding: 20px;
+    }
+
+    .form_submit{
+        align-self: stretch;
+    }
+
+    .footer{
+        padding-top: 45px;
+    }
+
+    .footer_top{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer_bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+}
